@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>၂၀၂၀ ရွေးကောက်ပွဲ အောင်နိုင်ရေး ထောက်ကူပြုအဖွဲ့ - စင်္ကာပူနိုင်ငံ</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/static/img/logo.gif">
+
+	<link rel="stylesheet" href="/static/css/layout.css">
+
+	<!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="/static/css/fontawesome-free-5.13.0-web/css/fontawesome.min.css" rel="stylesheet"> -->
+	<link href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  {% block css %}{% endblock %}
+  
+  <!-- library js -->
+  <script src="/static/js/lib/jquery-3.5.1.min.js"></script>
+
+  <!-- Custom js  -->
+  
+  <!-- python api call -->
+  <script type=text/javascript>
+    $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  </script>
+
+  {% block javascript %}{% endblock %}
+
+  </head>
+  <body>
+    <div class="header" style="margin-bottom: unset;">
+      <img src="/static/img/logo.gif" class="logo"/>
+    </div>
+    <hr/>
+  
+    <div class="menu">
+      <div class="home" style="width: 50%;"><a href="{{ url_for('index') }}">Home</a></div>
+      <div class="help" style="width: 50%;"><a href="{{ url_for('help') }}">Help</a></div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <div class="footer">
+      <span> ၂၀၂၀ ရွေးကောက်ပွဲ အောင်နိုင်ရေး ထောက်ကူပြုအဖွဲ့ - စင်္ကာပူနိုင်ငံ </span>
+    </div>
+  </body>

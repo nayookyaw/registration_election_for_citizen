@@ -1,0 +1,35 @@
+.header {
+    text-align: center;
+}
+.logo {
+    width: 310px;
+    height: 124px;
+    margin-top: 12px;
+}
+
+.menu {
+    display: flex;
+    text-align: center;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #177b64;
+    color: white;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+  }
+  
+  @media screen
+      and (max-device-width: 800px) {
+          .footer {
+            position: relative;
+            font-size: 12px;
+            height: 45px;
+            line-height: 45px;
+          }
+      }

@@ -1,0 +1,54 @@
+.content{
+    /* position: relative; */
+    width: 25%;
+    margin: 3vh auto;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.search{
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#volunter_table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#volunter_table th, #volunter_table td {
+    text-align: left;
+    padding: 12px;
+}
+
+#volunter_table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#volunter_table tr.header, #volunter_table tr:hover {
+    background-color: #e09f9f;
+}
+
+@media only screen and (min-width : 280px) {
+    .content{ width: 90% }
+  }
+  
+  @media only screen and (min-width : 480px) {
+    .content{ width: 60% }
+  }
+  
+  @media only screen and (min-width : 768px) {
+    .content{ width: 60% }
+  }
+  
+  @media only screen and (min-width : 992px) {
+    .content{ width: 30% }
+  }

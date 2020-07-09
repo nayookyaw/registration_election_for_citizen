@@ -1,0 +1,36 @@
+{% extends '/views/layout/layout.html' %}
+
+{% block css %} 
+	<link rel="stylesheet" href="/static/css/election.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="cont">
+	<div class="form">
+		<form action="">
+			<label>တောင်းဆိုသူ၏ အမည်</label>
+			<input type="text" class="input" placeholder="e.g /  ဦးကျော်ကျော်"/>
+			<label>တိုင်းရင်းသားလူမျိုး</label>
+			<input type="text" class="input" placeholder="e.g / ဗမာ "/>
+			<label>မှတ်ပုံတင်အမှတ်</label>
+			<input type="text" class="input" placeholder="e.g /  ၈/မသန(နိုင်) ၁၂၃၄၅၆"/>
+			<label>မွေးသက္ကရာဇ် (အသက်) </label>
+			<input type="text" class="input" placeholder="e.g /  ၂၁.၄.၁၉၉၂"/>
+			<label>အဘအမည်</label>
+			<input type="text" class="input" placeholder="e.g /  ဦးကိုကို"/>
+			<label>အမိအမည်</label>
+			<input type="text" class="input" placeholder="e.g /  ဒေါ်တင်မာ"/>
+			<label>တောင်းဆိုသူ၏ အမြဲနေရပ်လိပ်စာ</label>
+			<textarea class="text-input" placeholder="e.g /  အမှတ် ၁၈ , သီတာလမ်း , အမှတ် ၅ ရပ်ကွက် , တာမွေ မြို့နယ် , ရန်ကုန် တိုင်းဒေသကြီး"></textarea>
+			<label>တောင်းဆိုသူ ယခုရောက်ရှိ နေသည့် လိပ်စာ</label>
+			
+			<textarea class="text-input" placeholder="e.g /   Blk 32, Mandalay Road #13-37, Mandalay Towers, Singapore 308215, Phone: +65 80324637"></textarea>
+
+			<button class="login">Submit</button>
+			<input type="reset" value="Clear" class="reset">
+		
+		</form>
+	</div>
+</div>
+{% endblock %}
