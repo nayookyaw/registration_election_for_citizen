@@ -1,5 +1,44 @@
 CREATE DATABASE election;
 
-CREATE TABLE users ( id smallint unsigned not null auto_increment, name varchar(20) not null, 
-password varchar(20) not null, 
+SET GLOBAL max_allowed_packet=4194304;
+
+CREATE TABLE users ( id smallint unsigned not null auto_increment, 
+name varchar(20) not null, 
+ethnic varchar(50) not null,
+nrc varchar(50) not null,
+birthday varchar(20) not null,
+father varchar(20) not null,
+mother varchar(20) not null,
+permit_address varchar(200) not null,
+current_address varchar(200) not null,
 constraint pk_example primary key (id) );
+
+CREATE TABLE volunteers ( id smallint unsigned not null auto_increment, 
+name varchar(20) not null, 
+phone varchar(50) not null,
+mrt varchar(50) not null,
+mode varchar(10),
+constraint pk_example primary key (id) );
+
+INSERT INTO 
+	volunteers(name, phone, mrt)
+VALUES
+	('Ko Soe Tun','9487 4413','Sembawang & Admiralty'),
+    ('Ko Thet Oo Kyaw','9145 7374','Marsling'),
+    ('Ko Aung Zaw Myint','9234 4185','YewTee & Kranji'),
+    ('John Oo','8161 0994','ChoaChuKang'),
+    ('Ko Maung Thant','9646 4732','BukitGombak & BukitBatok'),
+    ('Ma Thant Thant Mon ','9380 3758','BukitGombak & BukitBatok'),
+    ('Ko Aung Thu Shein','9752 5082','JurongEast'),
+    ('Ko Aung Myo Win','9298 4667','ChineseGarden & Lakeside'),
+    ('Ko Kyaw Soe Tun','8189 5094','Boonlay'),
+    ('Ma Yuzana Htun','8118 8955','Boonlay'),
+    ('Ma Ei Sandar Myint','8684 2481','Pioneer'),
+    ('Ma Min Min Kyi','+959793 104723','JooKoon'),
+    ('Ma Thuzar Aung Myint','8695 8353','GulCircle'),
+    ('Ko Aung Myint Htun','9685 8496','TuasCrescent'),
+    ('Ma Khin Moe Moe Shein','9755 0892','TuasWestRoad'),
+    ('Ma Khin Lay','9336 1415','TuasLink'),
+    ('Ko Aung Myint Htun','9685 8496',''),
+    Circle_line_stations_part1
+	('Ko Thein Myint Win','8186 1576','Woodlands');

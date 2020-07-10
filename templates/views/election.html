@@ -4,6 +4,11 @@
 	<link rel="stylesheet" href="/static/css/election.css">
 {% endblock %}
 
+{% block javascript %} 
+	<link rel="stylesheet" href="/static/js/election.js">
+	<link rel="stylesheet" href="/static/js/lib/webcam.js">
+{% endblock %}
+
 {% block content %}
 
 <div class="cont">
@@ -26,6 +31,10 @@
 			<label>တောင်းဆိုသူ ယခုရောက်ရှိ နေသည့် လိပ်စာ</label>
 			
 			<textarea class="text-input" placeholder="e.g /   Blk 32, Mandalay Road #13-37, Mandalay Towers, Singapore 308215, Phone: +65 80324637"></textarea>
+
+			<div id="my_camera"></div>
+			<input type="button" onclick="snap()" value="Snap">
+			<div id="results"></div>
 
 			<button class="login">Submit</button>
 			<input type="reset" value="Clear" class="reset">
