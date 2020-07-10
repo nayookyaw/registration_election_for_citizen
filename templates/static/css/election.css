@@ -41,6 +41,10 @@
   background: #ecf0f1;
 }
 
+#signature{
+  text-align: center;
+}
+
 .login, .reset{
   color: #fff;
   cursor: pointer;

@@ -5,8 +5,7 @@
 {% endblock %}
 
 {% block javascript %} 
-	<link rel="stylesheet" href="/static/js/election.js">
-	<link rel="stylesheet" href="/static/js/lib/webcam.js">
+	<script src="/static/js/election.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -32,14 +31,23 @@
 			
 			<textarea class="text-input" placeholder="e.g /   Blk 32, Mandalay Road #13-37, Mandalay Towers, Singapore 308215, Phone: +65 80324637"></textarea>
 
-			<div id="my_camera"></div>
-			<input type="button" onclick="snap()" value="Snap">
-			<div id="results"></div>
+			<label>ပတ်စပို့ ပုံ ( Passport Image )</label>
+			<img id="output" src="" width="100%" height="250px"><br/><br/>
+			<input name="photo" type="file" accept="image/*" onchange="preview(this)"><br/><br/>
+			
+			<label>လက်မှတ် ( အောက်ပါ အဖြူရောင် ပေါ်တွင် မိမိ၏ လက်မှတ် ကိုရေးဆွဲ ပါ )</label>
+			<div id="signature">
+				<canvas id="can" width="300" height="250" style="border:2px solid;"></canvas>
+				<img id="canvasimg" style="width: 100%;" style="display:inline;">
+				<input type="button" value="save" id="btn" class="btn btn-success" size="30" onclick="save()">
+				<input type="button" value="clear" id="clr" class="btn btn-warning"size="23" onclick="erase()">
+			</div>
 
 			<button class="login">Submit</button>
 			<input type="reset" value="Clear" class="reset">
 		
 		</form>
+		
 	</div>
 </div>
 {% endblock %}
